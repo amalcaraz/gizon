@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gizon/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/gizon/static/js/main.273c34fe.chunk.js",
-    "main.js.map": "/gizon/static/js/main.273c34fe.chunk.js.map",
+    "main.js": "/gizon/static/js/main.62ed5e2f.chunk.js",
+    "main.js.map": "/gizon/static/js/main.62ed5e2f.chunk.js.map",
     "runtime-main.js": "/gizon/static/js/runtime-main.4c918848.js",
     "runtime-main.js.map": "/gizon/static/js/runtime-main.4c918848.js.map",
     "static/css/2.2e412779.chunk.css": "/gizon/static/css/2.2e412779.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.2e412779.chunk.css",
     "static/js/2.78fc6dfd.chunk.js",
     "static/css/main.ab7136cd.chunk.css",
-    "static/js/main.273c34fe.chunk.js"
+    "static/js/main.62ed5e2f.chunk.js"
   ]
 }
