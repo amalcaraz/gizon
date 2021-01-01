@@ -1,22 +1,38 @@
 import React from 'react';
 import styled from 'styled-components'
-import { device } from '../styles';
+import { device, diviceSize } from '../styles';
+
+const fixPercentage = 8
+
+function fixWidth(width: number): number {
+  return width - (width * (fixPercentage / 100))
+}
 
 const ContainerWrap = styled.div`
   margin: 0 auto;
   width: 100%;
-  max-width: 320px;
 
-  @media ${device.mobileM} { 
-    max-width: 600px;
+
+  @media ${device.mobileS} {
+    max-width: ${fixWidth(diviceSize.mobileS)}px;
   }
-
-  @media ${device.tablet} { 
-    max-width: 800px;
+  @media ${device.mobileM} {
+    max-width: ${fixWidth(diviceSize.mobileM)}px;
   }
-
+  @media ${device.mobileL} {
+    max-width: ${fixWidth(diviceSize.mobileL)}px;
+  }
+  @media ${device.tablet} {
+    max-width: ${fixWidth(diviceSize.tablet)}px;
+  }
+  @media ${device.laptop} {
+    max-width: ${fixWidth(diviceSize.laptop)}px;
+  }
+  @media ${device.laptopL} {
+    max-width: ${fixWidth(diviceSize.laptopL)}px;
+  }
   @media ${device.desktop} {
-    max-width: 1400px;
+    max-width: ${fixWidth(diviceSize.desktop)}px;
   }
 `
 

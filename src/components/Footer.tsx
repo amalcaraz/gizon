@@ -21,11 +21,12 @@ const FooterContainer = styled.footer`
       background-color: #fff;
     }
   }
+
 `
 
 const FooterGrid = styled.nav`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 25%);
 
   && li {
     line-height: 22px;
