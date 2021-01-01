@@ -11,7 +11,7 @@ const App: React.FC = function App() {
   return (
     <>
       <GlobalStyle />
-      <Router>
+      <Router basename="/gizon">
         <Header />
         <Main>
           <Routes />
