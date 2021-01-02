@@ -5,6 +5,7 @@ import logo from '../resources/img/logo.png';
 import { boxPadding, device, headerHeight, headerHeightM } from '../styles';
 import { Container } from './Container';
 import { MdMenu } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
   position: relative;
@@ -37,7 +38,7 @@ const LogoContainer = styled.div`
   }
 `
 
-const LogoLink = styled.a`
+const LogoLink = styled(Link)`
   display: block;
   height: 100%;
   
@@ -158,7 +159,7 @@ export const Header: React.FC = () => {
             <MdMenu size={26} />
           </MenuButton>
           <LogoContainer>
-            <LogoLink href="/">
+            <LogoLink to="/">
               <LogoImg src={logo}></LogoImg>
             </LogoLink>
           </LogoContainer>

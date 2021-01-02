@@ -6,12 +6,13 @@ import { Footer } from './components/Footer';
 import { Routes } from './components/Routes';
 import { Main } from './components/Main';
 import { GlobalStyle } from './styles/global';
+import { config } from './core/config';
 
 const App: React.FC = function App() {
   return (
     <>
       <GlobalStyle />
-      <Router basename="/gizon">
+      <Router basename={config.baseUrl}>
         <Header />
         <Main>
           <Routes />

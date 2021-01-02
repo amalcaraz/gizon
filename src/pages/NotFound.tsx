@@ -1,11 +1,13 @@
 import React from 'react';
-import styled from 'styled-components'
-
-const NotFoundContainer = styled.div`
-  background-color: rgba(10, 10, 10, 0);
-  height: 102px;
-`
+import { Container } from '../components/Container';
+import { TextBox } from '../components/TextBox';
 
 export const NotFound: React.FC = () => {
-  return (<NotFoundContainer>404 not found</NotFoundContainer>)
+  return (
+    <Container>
+      <TextBox title="Página no encontrada" quote="404">
+        <p>La url solicitada no está disponible o no coincide con ninguna página en nuestra web</p>
+      </TextBox>
+    </Container>
+  )
 }
