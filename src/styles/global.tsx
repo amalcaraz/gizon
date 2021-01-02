@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
   ${reset}
   // @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: 'Crimson Text', serif;
     font-weight: 400;
@@ -15,6 +19,10 @@ export const GlobalStyle = createGlobalStyle`
     overflow-y: scroll;
     overflow-x: hidden!important;
     -webkit-font-smoothing: antialiased;
+  }
+
+  img: {
+    max-width: 100%;
   }
 
   ::selection {
@@ -26,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Crimson Text', serif;
     text-decoration: none;
     color: ${textColor};
+    line-height: 1.5rem;
 
     &:after {
       position: absolute;

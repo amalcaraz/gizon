@@ -1,7 +1,6 @@
-
 export const MenuIcon: React.FC = () => {
   return (
-    <svg viewBox="0 0 27 27" height="27" width="27">
+    <svg viewBox="0 0 27 27" height="100%" width="100%">
       <rect width="5" height="5"></rect>
       <rect x="11" width="5" height="5"></rect>
       <rect x="22" width="5" height="5"></rect>

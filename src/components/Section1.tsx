@@ -1,35 +1,55 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../styles';
 
 const Container = styled.section`
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-gap: 10px;
-  margin: 80px 0;
+  margin: 20px 0;
+
+  grid-template: 
+    "col1"
+    "col2"
+    auto / 100%;
+
+  @media ${device.tablet} {
+    grid-template: 
+      "col1 col2"
+      auto / 50%;
+  }
+
+  @media ${device.tablet} {
+    margin: 80px 0;
+  }
 `
 
-const Col = styled.div`
+const Col = styled.div<{ reverse?: boolean }>`
   display: flex;
   overflow: hidden;
   align-items: center;
   justify-content: center;
+
+  @media ${device.tablet} {
+    ${({ reverse }) => reverse ? `
+      justify-content: flex-start;
+      grid-area: col1;
+    ` : `
+      justify-content: flex-end;
+      grid-area: col2;
+    `}
+  }  
 `
 
-const Col1 = styled(Col)`
-  justify-content: flex-start;
-`
+export interface Section1Props {
+  reverse?: boolean
+}
 
-const Col2 = styled(Col)`
-  justify-content: flex-end;
-`
-
-export const Section1: React.FC = ({ children }) => {
+export const Section1: React.FC<Section1Props> = ({ reverse, children }) => {
   if (!Array.isArray(children)) return null
 
   return (
     <Container>
-      <Col1>{children[0]}</Col1>
-      <Col2>{children[1]}</Col2>
+      <Col reverse={!reverse}>{children[0]}</Col>
+      <Col reverse={!!reverse}>{children[1]}</Col>
     </Container>
   )
 }

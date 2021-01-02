@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const MainContainer = styled.main`
   position: relative;
   background-color: #fff;
-  min-height: 550px;
+  min-height: 400px;
   overflow: hidden;
   margin: 0 auto;
 `

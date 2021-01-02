@@ -1,8 +1,17 @@
 import styled, { css } from "styled-components"
+import { boxPadding, device } from "../styles"
 
 const Container = styled.div`
-  padding: 20px;
-  max-width: 500px;
+  padding: ${boxPadding}px 0;
+  
+  @media ${device.tablet} {
+    width: 500px;
+  }
+
+  @media ${device.laptop} {
+    padding: ${boxPadding / 2}px;
+    width: 500px;
+  }
 `
 
 const CommonText = css`
@@ -34,7 +43,7 @@ const Text = styled.div`
 
 export interface TextBoxProps {
   title: string
-  quote: string
+  quote?: string
 }
 
 export const TextBox: React.FC<TextBoxProps> = ({ quote, title, children }) => {

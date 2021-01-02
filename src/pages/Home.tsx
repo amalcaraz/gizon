@@ -5,12 +5,16 @@ import { Section1 } from '../components/Section1';
 import { TextBox } from '../components/TextBox';
 import home1 from '../resources/img/home1.jpg';
 import home2 from '../resources/img/home2.jpg';
-import home3 from '../resources/img/home3.jpg';
 import home4 from '../resources/img/home4.jpg';
+import { device } from '../styles';
 
 const Img = styled.img`
-  width: 80%;
+  width: 100%;
   height: auto;
+
+  @media ${device.tablet} {
+    width: 80%;
+  }
 `
 
 export const Home: React.FC = () => {
@@ -24,12 +28,12 @@ export const Home: React.FC = () => {
         <Img src={home1} />
       </Section1>
 
-      <Section1>
-        <Img src={home2} />
+      <Section1 reverse>
         <TextBox title="Materiales ecofriendly" quote="Calidad">
           <p>Las prendas producidas para Gizon están elaboradas con los tejidos naturales e innovadores de la mayor alta gama.</p>
           <p>Compartimos una visión sostenible con el medio ambiente y entre nuestras prendas, podrás encontrar pantalones elaborados con originales materias primas como posos de café o fibra de bambú.</p>
         </TextBox>
+        <Img src={home2} />
       </Section1>
 
       <Section1>

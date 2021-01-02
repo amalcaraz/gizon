@@ -13,8 +13,8 @@ export interface Route {
 }
 
 export const routes: Route[] = [
-  { path: '/', name: 'Home', exact: true, nav: true, component: Home },
-  { path: '/about', name: 'About', exact: true, nav: true, component: About },
-  { path: '/contact', name: 'Contact', exact: true, nav: true, component: Contact },
+  { path: '/', name: 'Inicio', exact: true, nav: true, component: Home },
+  { path: '/about', name: 'Quienes somos', exact: true, nav: true, component: About },
+  { path: '/contact', name: 'Contacto', exact: true, nav: true, component: Contact },
   { path: '*', name: 'Not Found', exact: true, component: Home }
 ]

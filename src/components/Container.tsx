@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { device, diviceSize } from '../styles';
+import { boxPadding, device, diviceSize } from '../styles';
 
 const fixPercentage = 8
 
@@ -10,10 +10,10 @@ function fixWidth(width: number): number {
 
 const ContainerWrap = styled.div`
   margin: 0 auto;
+  padding: 0 ${boxPadding}px;
   width: 100%;
 
-
-  @media ${device.mobileS} {
+  /* @media ${device.mobileS} {
     max-width: ${fixWidth(diviceSize.mobileS)}px;
   }
   @media ${device.mobileM} {
@@ -21,8 +21,9 @@ const ContainerWrap = styled.div`
   }
   @media ${device.mobileL} {
     max-width: ${fixWidth(diviceSize.mobileL)}px;
-  }
+  } */
   @media ${device.tablet} {
+    padding: 0;
     max-width: ${fixWidth(diviceSize.tablet)}px;
   }
   @media ${device.laptop} {

@@ -2,27 +2,20 @@ import React, { ComponentType } from 'react';
 import styled from 'styled-components';
 import { NavLink, RouteProps } from 'react-router-dom';
 import { routes } from '../core/routes';
-import { device } from '../styles';
 
-const NavContainer = styled.nav`
-  display: flex;
-
-  @media ${device.laptop} { 
-    padding-right: 80px;
-  }
-`
-
+const DefaultNavContainer = styled.nav``
 const DefaultItemContainer: ComponentType = styled.a``
 
-export const Nav: React.FC<{
-  component: ComponentType<RouteProps>
-}> = ({ component = DefaultItemContainer }) => {
+export interface NavProps {
+  Container?: ComponentType
+  Component?: ComponentType<RouteProps>
+}
+
+export const Nav: React.FC<NavProps> = ({ Container = DefaultNavContainer, Component = DefaultItemContainer }) => {
   return (
-    <NavContainer>
-      <ul>
-        {routes.filter(({ nav }) => !!nav).map(({ path, name, exact }) => (
-          <NavLink to={path} exact={exact} component={component} activeClassName="active">{name}</NavLink>
-        ))}
-      </ul>
-    </NavContainer>)
+    <Container>
+      {routes.filter(({ nav }) => !!nav).map(({ path, name, exact }) => (
+        <NavLink to={path} exact={exact} component={Component} activeClassName="active">{name}</NavLink>
+      ))}
+    </Container>)
 }
