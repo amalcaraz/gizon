@@ -6,6 +6,7 @@ import { ContactList } from './ContactBox';
 import { Container } from './Container';
 import logo2 from '../resources/img/logo2.png';
 import { device } from '../styles';
+import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io';
 
 const LogoImg = styled.img`
   height: 80px;
@@ -47,6 +48,8 @@ const FooterGrid = styled.nav`
   & li {
     padding-bottom: 10px;
     line-height: 22px;
+    display: flex;
+    align-items: center;
   }
 
   && a {
@@ -100,6 +103,12 @@ const ColumnTitle = styled.h5`
   margin-bottom: 7px;
 `
 
+const Icon = styled.span`
+  line-height: 0;
+  color: #9a9a9a;
+  margin-right: .5rem;
+`
+
 export const Footer: React.FC = () => {
   return (
     <FooterContainer>
@@ -119,8 +128,8 @@ export const Footer: React.FC = () => {
           <FooterCol>
             <ColumnTitle>Síguenos</ColumnTitle>
             <ul>
-              <li><a href="https://www.instagram.com/gizon_moda_hombre/" target="_blank">Instagram</a></li>
-              <li><a href="https://www.facebook.com/GizonModaHombre" target="_blank">Facebook</a></li>
+              <li><Icon><IoLogoInstagram /></Icon><a href="https://www.instagram.com/gizon_moda_hombre/" target="_blank">Instagram</a></li>
+              <li><Icon><IoLogoFacebook /></Icon><a href="https://www.facebook.com/GizonModaHombre" target="_blank">Facebook</a></li>
             </ul>
           </FooterCol>
           <FooterCol>
@@ -129,5 +138,6 @@ export const Footer: React.FC = () => {
           </FooterCol>
         </FooterGrid>
       </Container>
-    </FooterContainer>)
+    </FooterContainer>
+  )
 }
