@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { LocationBox } from '../components/LocationBox';
+import { ContactBox } from '../components/ContactBox';
 
 const Map = styled.iframe`
   position: relative;
@@ -9,7 +9,7 @@ const Map = styled.iframe`
   height: 500px;
 `
 
-const LocationBoxWrap = styled.div`
+const ContactWrap = styled.div`
   display: flex;
   justify-content: center;
 `
@@ -24,9 +24,9 @@ export const Contact: React.FC = () => {
   return (
     <>
       <Map src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.891540290555!2d-2.9892781842568117!3d43.295592979135066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e5a7a0368b471%3A0x11b8afcf231e650d!2sGizon!5e0!3m2!1ses!2ses!4v1609540656970!5m2!1ses!2ses" width="600" height="450" frameBorder="0" allowFullScreen={false} aria-hidden="false" tabIndex={0}></Map>
-      <LocationBoxWrap>
-        <LocationBox />
-      </LocationBoxWrap>
+      <ContactWrap>
+        <ContactBox />
+      </ContactWrap>
     </>
   )
 }

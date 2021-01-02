@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
-import { MenuIcon } from './common/MenuIcon';
 import { Nav } from './Nav';
 import logo from '../resources/img/logo.png';
 import { boxPadding, device, headerHeight, headerHeightM } from '../styles';
@@ -32,7 +31,7 @@ const LogoContainer = styled.div`
   justify-content: center;
 
   @media ${device.tablet} {
-    height: 55%;
+    height: 60%;
     flex: 0 1 auto;
     display: block;
   }

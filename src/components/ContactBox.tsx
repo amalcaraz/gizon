@@ -42,19 +42,25 @@ const Icon = styled.span`
 
 const iconColor = '9a9a9a'
 
-export interface LocationBoxProps {
+export interface ContactBoxProps {
 }
 
-export const LocationBox: React.FC<LocationBoxProps> = () => {
+export const ContactBox: React.FC<ContactBoxProps> = () => {
   return (
     <Container>
       <Title>Encuentranos en</Title>
-      <ul>
-        <li><Link target="_blank" href="https://www.google.com/maps/place/Gizon/@43.2956533,-2.9870485,15z/data=!4m5!3m4!1s0x0:0x11b8afcf231e650d!8m2!3d43.2956533!4d-2.9870485"><Icon><MdLocationOn color={iconColor} /></Icon>Nafarroa Kalea, 14, 48901 Barakaldo, Bizkaia</Link></li>
-        <li><Link><Icon><MdSchedule color={iconColor} /></Icon>Lun - Vie: 10:00 - 13:30 / 17:00 - 20:00</Link></li>
-        <li><Link target="_blank" href="tel:+34944377790"><Icon><MdPhone color={iconColor} /></Icon>+34 944 37 77 90</Link></li>
-        <li><Link target="_blank" href="mailto:pau.gizon@gmail.com"><Icon><MdEmail color={iconColor} /></Icon>pau.gizon@gmail.com</Link></li>
-      </ul>
+      <ContactList />
     </Container>
+  )
+}
+
+export const ContactList: React.FC = () => {
+  return (
+    <ul>
+      <li><Link target="_blank" href="https://www.google.com/maps/place/Gizon/@43.2956533,-2.9870485,15z/data=!4m5!3m4!1s0x0:0x11b8afcf231e650d!8m2!3d43.2956533!4d-2.9870485"><Icon><MdLocationOn color={iconColor} /></Icon>Nafarroa Kalea, 14, 48901 Barakaldo, Bizkaia</Link></li>
+      <li><Link><Icon><MdSchedule color={iconColor} /></Icon>Lun - Vie: 10:00 - 13:30 / 17:00 - 20:00</Link></li>
+      <li><Link target="_blank" href="tel:+34944377790"><Icon><MdPhone color={iconColor} /></Icon>+34 944 37 77 90</Link></li>
+      <li><Link target="_blank" href="mailto:pau.gizon@gmail.com"><Icon><MdEmail color={iconColor} /></Icon>pau.gizon@gmail.com</Link></li>
+    </ul>
   )
 }
