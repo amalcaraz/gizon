@@ -24,7 +24,7 @@ const Container = styled.section`
 
 const Col = styled.div<{ reverse?: boolean }>`
   display: flex;
-  overflow: hidden;
+  // overflow: hidden;
   align-items: center;
   justify-content: center;
 

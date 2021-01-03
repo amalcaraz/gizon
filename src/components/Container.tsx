@@ -10,7 +10,7 @@ function fixWidth(width: number): number {
 
 const ContainerWrap = styled.div`
   margin: 0 auto;
-  padding: 0 ${boxPadding}px;
+  padding: 0 ${boxPadding / 2}px;
   width: 100%;
 
   /* @media ${device.mobileS} {

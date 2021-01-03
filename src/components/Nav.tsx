@@ -15,7 +15,7 @@ export const Nav: React.FC<NavProps> = ({ Container = DefaultNavContainer, Compo
   return (
     <Container>
       {routes.filter(({ nav }) => !!nav).map(({ path, name, exact }) => (
-        <NavLink to={path} exact={exact} component={Component} activeClassName="active">{name}</NavLink>
+        <NavLink key={name} to={path} exact={exact} component={Component} activeClassName="active">{name}</NavLink>
       ))}
     </Container>)
 }

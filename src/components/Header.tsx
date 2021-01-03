@@ -21,7 +21,7 @@ const InnerContainer = styled.div`
   
   @media ${device.tablet} {
     height: ${headerHeight}px;
-    padding-right: 110px;
+    padding-right: 118px;
   }
 `
 
@@ -30,11 +30,13 @@ const LogoContainer = styled.div`
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
+  padding-right: 36px;
 
   @media ${device.tablet} {
     height: 60%;
     flex: 0 1 auto;
     display: block;
+    padding-right: 0;
   }
 `
 
@@ -52,8 +54,6 @@ const LogoImg = styled.img`
 `
 
 const MenuButton = styled.div`
-  width: 20px;
-  height: 20px;
   cursor: pointer;  
   display: block;
   margin: 10px;

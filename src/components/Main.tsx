@@ -5,7 +5,7 @@ const MainContainer = styled.main`
   position: relative;
   background-color: #fff;
   min-height: 400px;
-  overflow: hidden;
+  // overflow: hidden;
   margin: 0 auto;
 `
 

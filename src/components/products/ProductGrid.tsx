@@ -1,15 +1,13 @@
 import styled from "styled-components"
+import { Product } from "./Product"
 import { Product as ProductModel } from "../../core/products"
 
 const Container = styled.figure`
   display: flex;
   flex-direction: column;
-  background-color: #ccc;
 `
 
 const Img = styled.img`
-  width: 50%;
-  height: auto;
 `
 
 const Title = styled.figcaption`
@@ -22,13 +20,14 @@ const Title = styled.figcaption`
   margin-bottom: .7rem;
 `
 
-export type ProductProps = ProductModel
+export interface ProductGridProps {
+  products: ProductModel[]
+}
 
-export const Product: React.FC<ProductProps> = ({ name, img }) => {
+export const ProductGrid: React.FC<ProductGridProps> = ({ products }) => {
   return (
     <Container>
-      <Img src={img} />
-      <Title>{name}</Title>
+      {products.map(product => <Product {...product} />)}
     </Container>
   )
 }

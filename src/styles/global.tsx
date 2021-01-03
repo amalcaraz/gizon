@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
-import 'react-awesome-slider/dist/styles.css';
 import { textColor } from './vars';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
