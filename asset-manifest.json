@@ -1,30 +1,36 @@
 {
   "files": {
     "main.css": "/gizon/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/gizon/static/js/main.dfa8e2e0.chunk.js",
-    "main.js.map": "/gizon/static/js/main.dfa8e2e0.chunk.js.map",
-    "runtime-main.js": "/gizon/static/js/runtime-main.a5c2c10e.js",
-    "runtime-main.js.map": "/gizon/static/js/runtime-main.a5c2c10e.js.map",
-    "static/css/2.2e412779.chunk.css": "/gizon/static/css/2.2e412779.chunk.css",
-    "static/js/2.bad07db3.chunk.js": "/gizon/static/js/2.bad07db3.chunk.js",
-    "static/js/2.bad07db3.chunk.js.map": "/gizon/static/js/2.bad07db3.chunk.js.map",
-    "static/js/3.76f8f736.chunk.js": "/gizon/static/js/3.76f8f736.chunk.js",
-    "static/js/3.76f8f736.chunk.js.map": "/gizon/static/js/3.76f8f736.chunk.js.map",
+    "main.js": "/gizon/static/js/main.d37e39a7.chunk.js",
+    "main.js.map": "/gizon/static/js/main.d37e39a7.chunk.js.map",
+    "runtime-main.js": "/gizon/static/js/runtime-main.3faf6648.js",
+    "runtime-main.js.map": "/gizon/static/js/runtime-main.3faf6648.js.map",
+    "static/css/2.55d8add8.chunk.css": "/gizon/static/css/2.55d8add8.chunk.css",
+    "static/js/2.a914a168.chunk.js": "/gizon/static/js/2.a914a168.chunk.js",
+    "static/js/2.a914a168.chunk.js.map": "/gizon/static/js/2.a914a168.chunk.js.map",
+    "static/js/3.4cfbb877.chunk.js": "/gizon/static/js/3.4cfbb877.chunk.js",
+    "static/js/3.4cfbb877.chunk.js.map": "/gizon/static/js/3.4cfbb877.chunk.js.map",
     "index.html": "/gizon/index.html",
-    "static/css/2.2e412779.chunk.css.map": "/gizon/static/css/2.2e412779.chunk.css.map",
+    "static/css/2.55d8add8.chunk.css.map": "/gizon/static/css/2.55d8add8.chunk.css.map",
     "static/css/main.ab7136cd.chunk.css.map": "/gizon/static/css/main.ab7136cd.chunk.css.map",
-    "static/js/2.bad07db3.chunk.js.LICENSE.txt": "/gizon/static/js/2.bad07db3.chunk.js.LICENSE.txt",
+    "static/js/2.a914a168.chunk.js.LICENSE.txt": "/gizon/static/js/2.a914a168.chunk.js.LICENSE.txt",
     "static/media/home1.3b44e2af.jpg": "/gizon/static/media/home1.3b44e2af.jpg",
     "static/media/home2.6c65ee14.jpg": "/gizon/static/media/home2.6c65ee14.jpg",
     "static/media/home4.8a8e293d.jpg": "/gizon/static/media/home4.8a8e293d.jpg",
     "static/media/logo.6e8150a5.png": "/gizon/static/media/logo.6e8150a5.png",
-    "static/media/logo2.f5a2fac8.png": "/gizon/static/media/logo2.f5a2fac8.png"
+    "static/media/logo2.f5a2fac8.png": "/gizon/static/media/logo2.f5a2fac8.png",
+    "static/media/slide11.35422489.jpg": "/gizon/static/media/slide11.35422489.jpg",
+    "static/media/slide12.689af560.jpg": "/gizon/static/media/slide12.689af560.jpg",
+    "static/media/slide21.509d4817.jpg": "/gizon/static/media/slide21.509d4817.jpg",
+    "static/media/slide22.96615495.jpg": "/gizon/static/media/slide22.96615495.jpg",
+    "static/media/slide31.f582d817.jpg": "/gizon/static/media/slide31.f582d817.jpg",
+    "static/media/slide32.4578e6d0.jpg": "/gizon/static/media/slide32.4578e6d0.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a5c2c10e.js",
-    "static/css/2.2e412779.chunk.css",
-    "static/js/2.bad07db3.chunk.js",
+    "static/js/runtime-main.3faf6648.js",
+    "static/css/2.55d8add8.chunk.css",
+    "static/js/2.a914a168.chunk.js",
     "static/css/main.ab7136cd.chunk.css",
-    "static/js/main.dfa8e2e0.chunk.js"
+    "static/js/main.d37e39a7.chunk.js"
   ]
 }
