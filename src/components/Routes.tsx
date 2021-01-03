@@ -5,7 +5,6 @@ import { routes } from "../core/routes";
 export const Routes: React.FC = () => {
   let location = useLocation()
 
-  console.log('GAGA => ', location)
   useEffect(() => {
     gtag('event', 'page_view')
   }, [location]);
