@@ -25,7 +25,7 @@ export const Home: React.FC = () => {
         <title>GIZON Moda | Nueva Colección Invierno Hombre</title>
         <meta
           name="description"
-          content="Descubre la nueva colección otoño - invierno 2020 de GIZON online . Las últimas tendencias en ropa de hombre, caballero y joven disponible también en nuestra tienda de Barakaldo."
+          content="Descubre la nueva colección otoño - invierno 2020 de GIZON online. Las últimas tendencias en ropa de hombre, caballero y joven disponible también en nuestra tienda de Barakaldo."
         />
       </Helmet>
       <HomeCarousel title="Nueva colección" subtitle="Otoño - Invierno" />
