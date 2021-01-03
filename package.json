@@ -33,9 +33,10 @@
     "lint:js": "eslint --cache --fix src",
     "lint:css": "stylelint --cache src/**/*.{tsx,css,scss}",
     "lint:fix": "npm run lint:js && lint:css",
-    "img": "rm -rf src/resources/img && npm run webp && npm run jpg",
-    "webp": "imagemin src/resources/rawimg/* --plugin.webp.quality=95 --out-dir=src/resources/img",
-    "jpg": "imagemin src/resources/rawimg/*.jpg --plugin.mozjpeg.quality=85 --out-dir=src/resources/img"
+    "img2": "rm -rf public/img && npm run webp && npm run jpg",
+    "webp": "imagemin images/* --plugin.webp.quality=95 --out-dir=public/img",
+    "jpg": "imagemin images/*.jpeg --plugin.mozjpeg.quality=85 --out-dir=public/img",
+    "img": "rm -rf public/img && node scripts/img.js"
   },
   "husky": {
     "hooks": {
@@ -85,5 +86,5 @@
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0"
   },
-  "homepage": "https://amalcaraz.github.io/gizon"
+  "homepage": "https://www.gizon-moda.com"
 }

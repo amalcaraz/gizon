@@ -1,3 +1,4 @@
 export const config = {
-  baseUrl: "/gizon",
+  // baseUrl: "/gizon",
+  baseUrl: "/",
 };

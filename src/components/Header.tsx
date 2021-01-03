@@ -1,11 +1,11 @@
 import React, { useCallback, useState } from "react";
 import styled from "styled-components";
 import { Nav } from "./Nav";
-import logo from "../resources/img/logo.png";
 import { boxPadding, device, headerHeight, headerHeightM } from "../styles";
 import { Container } from "./Container";
 import { MdMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { Image } from "./Image";
 
 const HeaderContainer = styled.header`
   position: relative;
@@ -49,7 +49,7 @@ const LogoLink = styled(Link)`
   }
 `;
 
-const LogoImg = styled.img`
+const LogoImg = styled(Image)`
   height: 100%;
 `;
 
@@ -157,7 +157,7 @@ export const Header: React.FC = () => {
           </MenuButton>
           <LogoContainer>
             <LogoLink to="/">
-              <LogoImg src={logo}></LogoImg>
+              <LogoImg src="./img/logo.png" alt=""></LogoImg>
             </LogoLink>
           </LogoContainer>
           <NavMobileContainer open={menuOpen}>

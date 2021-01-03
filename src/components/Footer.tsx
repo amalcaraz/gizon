@@ -4,11 +4,11 @@ import styled from "styled-components";
 import { routes } from "../core/routes";
 import { ContactList } from "./ContactBox";
 import { Container } from "./Container";
-import logo2 from "../resources/img/logo2.png";
 import { device } from "../styles";
 import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io";
+import { Image } from "./Image";
 
-const LogoImg = styled.img`
+const LogoImg = styled(Image)`
   height: 80px;
   margin-left: -10px;
 
@@ -114,7 +114,7 @@ export const Footer: React.FC = () => {
       <Container>
         <FooterGrid>
           <LogoFooterCol>
-            <LogoImg src={logo2}></LogoImg>
+            <LogoImg src="./img/logo2.png" alt=""></LogoImg>
           </LogoFooterCol>
           <FooterCol>
             <ColumnTitle>Gizon Moda</ColumnTitle>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Product as ProductModel } from "../../core/products";
+import { Image } from "../Image";
 
 const Container = styled.figure`
   display: flex;
@@ -7,7 +8,7 @@ const Container = styled.figure`
   background-color: #ccc;
 `;
 
-const Img = styled.img`
+const Img = styled(Image)`
   width: 50%;
   height: auto;
 `;
@@ -27,8 +28,9 @@ export type ProductProps = ProductModel;
 export const Product: React.FC<ProductProps> = ({ name, img }) => {
   return (
     <Container>
-      <Img src={img} />
+      <Img src="./img/slide12.jpeg" alt={`Prenda de vestir - ${name}`} />
       <Title>{name}</Title>
     </Container>
   );
 };
+ 

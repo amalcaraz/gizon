@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
-  img: {
+  img {
     max-width: 100%;
   }
 

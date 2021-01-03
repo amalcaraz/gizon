@@ -2,16 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Carousel } from "react-responsive-carousel";
 import { device } from "../styles";
-import slide11 from "../resources/img/slide11.jpg";
-import slide12 from "../resources/img/slide12.jpg";
-import slide21 from "../resources/img/slide21.jpg";
-import slide22 from "../resources/img/slide22.jpg";
-import slide31 from "../resources/img/slide31.jpg";
-import slide32 from "../resources/img/slide32.jpg";
+import { bgImage, Image } from "./Image";
 
-const Img1 = styled.div<{ src: string }>`
+const Img1 = styled.div<{src: string}>`
   && {
-    ${({ src }) => `background-image: url(${src})`};
+    ${bgImage}
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,7 +15,7 @@ const Img1 = styled.div<{ src: string }>`
   }
 `;
 
-const Img2 = styled.img`
+const Img2 = styled(Image)`
   && {
     width: 50% !important;
     height: auto;
@@ -157,7 +152,7 @@ export const HomeCarousel: React.FC<HomeCarouselProps> = ({
         showIndicators={true}
         showStatus={false}
         showThumbs={false}
-        autoPlay={false}
+        autoPlay={true}
         transitionTime={1000}
         infiniteLoop={true}
         interval={1000 * 5}
@@ -168,26 +163,26 @@ export const HomeCarousel: React.FC<HomeCarouselProps> = ({
       >
         <Slide>
           <SlideCol color="#4c1c38" n={1}>
-            <Img2 src={slide11} />
+            <Img2 src="./img/slide11.jpeg" alt="Parka de plumas con capucha verde para hombre" />
           </SlideCol>
           <SlideCol color="#232228" n={2} hideMobile>
-            <Img1 src={slide12} />
+            <Img1 src="./img/slide12.jpeg" title="Chaleco acolchado granate de invierno para hombre" />
           </SlideCol>
         </Slide>
         <Slide>
           <SlideCol color="#443563" n={2}>
-            <Img2 src={slide32} />
+            <Img2 src="./img/slide22.jpeg" alt="" />
           </SlideCol>
           <SlideCol color="#232228" n={1} hideMobile>
-            <Img1 src={slide21} />
+            <Img1 src="./img/slide21.jpeg" title="" />
           </SlideCol>
         </Slide>
         <Slide>
           <SlideCol color="#bf8a3d" n={1}>
-            <Img2 src={slide22} />
+            <Img2 src="./img/slide31.jpeg" alt="" />
           </SlideCol>
           <SlideCol color="#232228" n={2} hideMobile>
-            <Img1 src={slide31} />
+            <Img1 src="./img/slide32.jpeg" title="" />
           </SlideCol>
         </Slide>
       </MyCarousel>
