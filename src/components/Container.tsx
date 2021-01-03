@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components'
-import { boxPadding, device, diviceSize } from '../styles';
+import React from "react";
+import styled from "styled-components";
+import { boxPadding, device, diviceSize } from "../styles";
 
-const fixPercentage = 8
+const fixPercentage = 8;
 
 function fixWidth(width: number): number {
-  return width - (width * (fixPercentage / 100))
+  return width - width * (fixPercentage / 100);
 }
 
 const ContainerWrap = styled.div`
@@ -35,8 +35,8 @@ const ContainerWrap = styled.div`
   @media ${device.desktop} {
     max-width: ${fixWidth(diviceSize.desktop)}px;
   }
-`
+`;
 
 export const Container: React.FC = ({ children }) => {
-  return (<ContainerWrap>{children}</ContainerWrap>)
-}
+  return <ContainerWrap>{children}</ContainerWrap>;
+};

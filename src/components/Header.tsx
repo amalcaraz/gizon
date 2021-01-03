@@ -1,29 +1,29 @@
-import React, { useCallback, useState } from 'react';
-import styled from 'styled-components';
-import { Nav } from './Nav';
-import logo from '../resources/img/logo.png';
-import { boxPadding, device, headerHeight, headerHeightM } from '../styles';
-import { Container } from './Container';
+import React, { useCallback, useState } from "react";
+import styled from "styled-components";
+import { Nav } from "./Nav";
+import logo from "../resources/img/logo.png";
+import { boxPadding, device, headerHeight, headerHeightM } from "../styles";
+import { Container } from "./Container";
 import { MdMenu } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.header`
   position: relative;
   z-index: 1;
   box-shadow: 0px 2px 5px #ddd;
-`
+`;
 
 const InnerContainer = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   height: ${headerHeightM}px;
-  
+
   @media ${device.tablet} {
     height: ${headerHeight}px;
     padding-right: 118px;
   }
-`
+`;
 
 const LogoContainer = styled.div`
   height: 70%;
@@ -38,33 +38,33 @@ const LogoContainer = styled.div`
     display: block;
     padding-right: 0;
   }
-`
+`;
 
 const LogoLink = styled(Link)`
   display: block;
   height: 100%;
-  
+
   &::after {
     display: none;
   }
-`
+`;
 
 const LogoImg = styled.img`
   height: 100%;
-`
+`;
 
 const MenuButton = styled.div`
-  cursor: pointer;  
+  cursor: pointer;
   display: block;
   margin: 10px;
 
   @media ${device.tablet} {
     display: none;
   }
-`
+`;
 
 const NavItem = styled.a`
-  font-size: 1.125rem; // 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.3px;
@@ -74,21 +74,19 @@ const NavItem = styled.a`
   width: 100%;
   padding: 20px;
 
-
   &::after {
     display: none;
   }
 
   &.active {
     background-color: rgba(0, 0, 0, 0.05);
-    // font-weight: 600; 
   }
 
   @media ${device.tablet} {
     position: relative;
     margin: 0 17px;
 
-    // Reset
+    /* Reset */
     display: inline;
     width: auto;
     padding: 0;
@@ -101,26 +99,25 @@ const NavItem = styled.a`
       background-color: transparent;
     }
   }
-    
-`
+`;
 
 const NavContainer = styled.nav`
   @media ${device.tablet} {
-    display: flex; 
+    display: flex;
     justify-content: center;
   }
-`
+`;
 
 const NavMobileContainer = styled.div<{ open: boolean }>`
-  display: ${({ open }) => open ? 'block' : 'none'};
+  display: ${({ open }) => (open ? "block" : "none")};
 
   @media ${device.tablet} {
     display: block !important;
   }
 
   flex: 1 0 100%;
-  
-  // Mobile menu
+
+  /* Mobile menu */
   position: absolute;
   top: 102%;
   left: 0;
@@ -132,7 +129,7 @@ const NavMobileContainer = styled.div<{ open: boolean }>`
   @media ${device.tablet} {
     flex: 1 1 auto;
 
-    // Mobile menu reset
+    /* Mobile menu reset */
     height: auto;
     position: static;
     top: 0;
@@ -142,14 +139,14 @@ const NavMobileContainer = styled.div<{ open: boolean }>`
     padding: 0;
     box-shadow: none;
   }
-`
+`;
 
 export const Header: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const menuClickHandler = useCallback(() => {
-    setMenuOpen(!menuOpen)
-  }, [menuOpen, setMenuOpen])
+    setMenuOpen(!menuOpen);
+  }, [menuOpen, setMenuOpen]);
 
   return (
     <HeaderContainer>
@@ -169,5 +166,5 @@ export const Header: React.FC = () => {
         </InnerContainer>
       </Container>
     </HeaderContainer>
-  )
-}
+  );
+};

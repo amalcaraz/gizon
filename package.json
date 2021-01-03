@@ -12,6 +12,7 @@
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
     "react-responsive-carousel": "^3.2.11",
     "react-router-dom": "^5.2.0",
@@ -29,12 +30,24 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "img": "imagemin src/resources/rawimg/* --out-dir=src/resources/img"
+    "lint:js": "eslint --cache --fix src",
+    "lint:css": "stylelint --cache src/**/*.{tsx,css,scss}",
+    "lint:fix": "npm run lint:js && lint:css",
+    "img": "rm -rf src/resources/img && npm run webp && npm run jpg",
+    "webp": "imagemin src/resources/rawimg/* --plugin.webp.quality=95 --out-dir=src/resources/img",
+    "jpg": "imagemin src/resources/rawimg/*.jpg --plugin.mozjpeg.quality=85 --out-dir=src/resources/img"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --cache --fix"
+    ],
+    "src/**/*.{tsx}": [
+      "stylelint --cache"
     ]
   },
   "browserslist": {
@@ -50,11 +63,27 @@
     ]
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.0",
     "@types/react-router-dom": "^5.1.6",
     "@types/styled-components": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-react": "^7.22.0",
     "gh-pages": "^3.1.0",
+    "husky": "^4.3.6",
     "imagemin-cli": "^6.0.0",
-    "react-snap": "^1.23.0"
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webp": "^6.0.0",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "react-snap": "^1.23.0",
+    "sharp": "^0.27.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0"
   },
   "homepage": "https://amalcaraz.github.io/gizon"
 }

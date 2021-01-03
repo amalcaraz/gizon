@@ -1,11 +1,10 @@
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
-import { textColor } from './vars';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
+import { textColor } from "./vars";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
-  // @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
   * {
     box-sizing: border-box;
@@ -17,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #fff;
     color: ${textColor};
     overflow-y: scroll;
-    overflow-x: hidden!important;
+    overflow-x: hidden !important;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -54,4 +53,4 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
   }
-`
+`;

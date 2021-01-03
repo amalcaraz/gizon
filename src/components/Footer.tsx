@@ -1,12 +1,12 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components'
-import { routes } from '../core/routes';
-import { ContactList } from './ContactBox';
-import { Container } from './Container';
-import logo2 from '../resources/img/logo2.png';
-import { device } from '../styles';
-import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { routes } from "../core/routes";
+import { ContactList } from "./ContactBox";
+import { Container } from "./Container";
+import logo2 from "../resources/img/logo2.png";
+import { device } from "../styles";
+import { IoLogoFacebook, IoLogoInstagram } from "react-icons/io";
 
 const LogoImg = styled.img`
   height: 80px;
@@ -15,7 +15,7 @@ const LogoImg = styled.img`
   @media ${device.tablet} {
     height: 100px;
   }
-`
+`;
 
 const FooterContainer = styled.footer`
   background-color: #080808;
@@ -25,7 +25,7 @@ const FooterContainer = styled.footer`
     padding-top: 97px;
     padding-bottom: 59px;
   }
-`
+`;
 
 const FooterGrid = styled.nav`
   display: grid;
@@ -52,8 +52,7 @@ const FooterGrid = styled.nav`
     align-items: center;
   }
 
-  && a {
-    font-size: 15px;
+  && a, && span {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     color: #ddd;
@@ -65,9 +64,9 @@ const FooterGrid = styled.nav`
     &:hover::after {
       opacity: 1;
       background-color: #fff;
-    } 
+    }
   }
-`
+`;
 
 const FooterCol = styled.div`
   margin: 20px 0;
@@ -79,7 +78,7 @@ const FooterCol = styled.div`
   &:last-child li {
     padding-bottom: 2px;
   }
-`
+`;
 
 const LogoFooterCol = styled(FooterCol)`
   @media ${device.laptop} {
@@ -89,10 +88,10 @@ const LogoFooterCol = styled(FooterCol)`
   @media ${device.laptopL} {
     display: block;
   }
-`
+`;
 
 const ColumnTitle = styled.h5`
-  font-family: "Crimson Text", sans-serif;
+  font-family: 'Crimson Text', serif;
   font-size: 24px;
   letter-spacing: 0.15px;
   line-height: 39px;
@@ -101,13 +100,13 @@ const ColumnTitle = styled.h5`
   color: #ffffff;
   font-style: normal;
   margin-bottom: 7px;
-`
+`;
 
 const Icon = styled.span`
   line-height: 0;
   color: #9a9a9a;
-  margin-right: .5rem;
-`
+  margin-right: 0.5rem;
+`;
 
 export const Footer: React.FC = () => {
   return (
@@ -119,17 +118,43 @@ export const Footer: React.FC = () => {
           </LogoFooterCol>
           <FooterCol>
             <ColumnTitle>Gizon Moda</ColumnTitle>
-            {routes.filter(({ nav }) => !!nav).map(({ path, name, exact }) => (
-              <ul>
-                <li><NavLink to={path}>{name}</NavLink></li>
-              </ul>
-            ))}
+            {routes
+              .filter(({ nav }) => !!nav)
+              .map(({ path, name, exact }) => (
+                <ul>
+                  <li>
+                    <NavLink to={path}>{name}</NavLink>
+                  </li>
+                </ul>
+              ))}
           </FooterCol>
           <FooterCol>
             <ColumnTitle>Síguenos</ColumnTitle>
             <ul>
-              <li><Icon><IoLogoInstagram /></Icon><a href="https://www.instagram.com/gizon_moda_hombre/" target="_blank">Instagram</a></li>
-              <li><Icon><IoLogoFacebook /></Icon><a href="https://www.facebook.com/GizonModaHombre" target="_blank">Facebook</a></li>
+              <li>
+                <Icon>
+                  <IoLogoInstagram />
+                </Icon>
+                <a
+                  href="https://www.instagram.com/gizon_moda_hombre/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <Icon>
+                  <IoLogoFacebook />
+                </Icon>
+                <a
+                  href="https://www.facebook.com/GizonModaHombre"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Facebook
+                </a>
+              </li>
             </ul>
           </FooterCol>
           <FooterCol>
@@ -139,5 +164,5 @@ export const Footer: React.FC = () => {
         </FooterGrid>
       </Container>
     </FooterContainer>
-  )
-}
+  );
+};

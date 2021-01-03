@@ -5,8 +5,8 @@ export const diviceSize = {
   tablet: 768,
   laptop: 1024,
   laptopL: 1440,
-  desktop: 2560
-}
+  desktop: 2560,
+};
 
 export const device = {
   mobileS: `(min-width: ${diviceSize.mobileS}px)`,

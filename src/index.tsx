@@ -1,17 +1,21 @@
-import React from 'react';
-import { hydrate, render } from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import { hydrate, render } from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const rootElement = document.getElementById('root')
-const RootComponent = <React.StrictMode><App /></React.StrictMode >
+const rootElement = document.getElementById("root");
+const RootComponent = (
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
 if (rootElement) {
   if (rootElement.hasChildNodes()) {
-    hydrate(RootComponent, rootElement)
+    hydrate(RootComponent, rootElement);
   } else {
-    render(RootComponent, rootElement)
+    render(RootComponent, rootElement);
   }
 }
 

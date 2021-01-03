@@ -1,12 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './App.css';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { Routes } from './components/Routes';
-import { Main } from './components/Main';
-import { GlobalStyle } from './styles/global';
-import { config } from './core/config';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import "./App.css";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Routes } from "./components/Routes";
+import { Main } from "./components/Main";
+import { GlobalStyle } from "./styles/global";
+import { config } from "./core/config";
 
 const App: React.FC = function App() {
   return (
@@ -21,6 +21,6 @@ const App: React.FC = function App() {
       </Router>
     </>
   );
-}
+};
 
 export default App;

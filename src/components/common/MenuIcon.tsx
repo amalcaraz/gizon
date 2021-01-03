@@ -11,5 +11,5 @@ export const MenuIcon: React.FC = () => {
       <rect x="11" y="22" width="5" height="5"></rect>
       <rect x="22" y="22" width="5" height="5"></rect>
     </svg>
-  )
-}
+  );
+};

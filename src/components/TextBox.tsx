@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components"
-import { boxPadding, device } from "../styles"
+import styled, { css } from "styled-components";
+import { boxPadding, device } from "../styles";
 
 const Container = styled.div`
   padding: ${boxPadding}px 0;
@@ -8,13 +8,13 @@ const Container = styled.div`
     padding: ${boxPadding / 2}px;
     max-width: 500px;
   }
-`
+`;
 
 const CommonText = css`
   line-height: 24px;
   font-weight: 400;
   color: #777;
-`
+`;
 
 const Quote = styled.h6`
   ${CommonText}
@@ -26,7 +26,7 @@ const Quote = styled.h6`
   @media ${device.tablet} {
     font-size: 22px;
   }
-`
+`;
 
 const Title = styled.h3`
   text-transform: uppercase;
@@ -38,16 +38,16 @@ const Title = styled.h3`
   @media ${device.tablet} {
     font-size: 40px;
   }
-`
+`;
 
 const Text = styled.div`
   ${CommonText}
-  font-family: roboto,sans-serif;
-`
+  font-family: roboto, sans-serif;
+`;
 
 export interface TextBoxProps {
-  title: string
-  quote?: string
+  title: string;
+  quote?: string;
 }
 
 export const TextBox: React.FC<TextBoxProps> = ({ quote, title, children }) => {
@@ -57,5 +57,5 @@ export const TextBox: React.FC<TextBoxProps> = ({ quote, title, children }) => {
       <Title>{title}</Title>
       <Text>{children}</Text>
     </Container>
-  )
-}
+  );
+};
