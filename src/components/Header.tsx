@@ -157,7 +157,7 @@ export const Header: React.FC = () => {
           </MenuButton>
           <LogoContainer>
             <LogoLink to="/">
-              <LogoImg src="./img/logo.png" alt=""></LogoImg>
+              <LogoImg src="./img/logo.png" alt="Logo de GIZON"></LogoImg>
             </LogoLink>
           </LogoContainer>
           <NavMobileContainer open={menuOpen}>

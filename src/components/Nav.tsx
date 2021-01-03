@@ -19,9 +19,9 @@ export const Nav: React.FC<NavProps> = ({
     <Container>
       {routes
         .filter(({ nav }) => !!nav)
-        .map(({ path, name, exact }) => (
+        .map(({ id, path, name, exact }) => (
           <NavLink
-            key={name}
+            key={id}
             to={path}
             exact={exact}
             component={Component}

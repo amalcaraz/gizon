@@ -1,7 +1,8 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import styled from "styled-components";
-import { ContactBox } from "../components/ContactBox";
+import React from "react"
+import styled from "styled-components"
+import { ContactBox } from "../components/ContactBox"
+import { PageMeta } from "../components/PageMeta"
+import { RouteId } from "../core/routes"
 
 const Map = styled.iframe`
   position: relative;
@@ -24,10 +25,7 @@ const ContactWrap = styled.div`
 export const Contact: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>Contacta con nosotros | GIZON Moda</title>
-        <meta name="description" content="¿Tienes alguna pregunta o necesitas ayuda? Encuentra nuestros datos de contacto, dirección, email, teléfono y horarios de apertura en los siguientes enlaces." />
-      </Helmet>
+      <PageMeta id={RouteId.CONTACT} />
       <Map
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2903.891540290555!2d-2.9892781842568117!3d43.295592979135066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e5a7a0368b471%3A0x11b8afcf231e650d!2sGizon!5e0!3m2!1ses!2ses!4v1609540656970!5m2!1ses!2ses"
         width="600"

@@ -1,12 +1,13 @@
-import React from "react";
-import styled from "styled-components";
-import { Container } from "../components/Container";
-import { Section1 } from "../components/Section1";
-import { TextBox } from "../components/TextBox";
-import { device } from "../styles";
-import { HomeCarousel } from "../components/HomeCarousel";
-import { Helmet } from "react-helmet";
-import { Image } from "../components/Image";
+import React from "react"
+import styled from "styled-components"
+import { Container } from "../components/Container"
+import { Section1 } from "../components/Section1"
+import { TextBox } from "../components/TextBox"
+import { device } from "../styles"
+import { HomeCarousel } from "../components/HomeCarousel"
+import { Image } from "../components/Image"
+import { PageMeta } from "../components/PageMeta"
+import { RouteId } from "../core/routes"
 
 const Img = styled(Image)`
   width: 100%;
@@ -20,10 +21,7 @@ const Img = styled(Image)`
 export const Home: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>GIZON Moda | Nueva Colección Invierno Hombre</title>
-        <meta name="description" content="Descubre la nueva colección otoño - invierno 2020 de GIZON online. Las últimas tendencias en ropa de hombre, caballero y joven disponible también en nuestra tienda de Barakaldo." />
-      </Helmet>
+      <PageMeta id={RouteId.HOME} />
       <HomeCarousel title="Nueva colección" subtitle="Otoño - Invierno" />
       <Container>
         <Section1 reverse>
@@ -56,5 +54,5 @@ export const Home: React.FC = () => {
         </Section1>
       </Container>
     </>
-  );
-};
+  )
+}

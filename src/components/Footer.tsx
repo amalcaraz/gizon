@@ -114,14 +114,14 @@ export const Footer: React.FC = () => {
       <Container>
         <FooterGrid>
           <LogoFooterCol>
-            <LogoImg src="./img/logo2.png" alt=""></LogoImg>
+            <LogoImg src="./img/logo2.png" alt="Logo de GIZON"></LogoImg>
           </LogoFooterCol>
           <FooterCol>
             <ColumnTitle>Gizon Moda</ColumnTitle>
             {routes
               .filter(({ nav }) => !!nav)
-              .map(({ path, name, exact }) => (
-                <ul>
+              .map(({ id, path, name }) => (
+                <ul key={id}>
                   <li>
                     <NavLink to={path}>{name}</NavLink>
                   </li>

@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import { device } from "../styles";
 import { bgImage, Image } from "./Image";
 
-const Img1 = styled.div<{src: string}>`
+const Img1 = styled.div<{ src: string }>`
   && {
     ${bgImage}
     background-position: center center;
@@ -102,7 +102,6 @@ const Title = styled.h1`
   font-weight: 600;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
   transform-origin: 50% 50% 0px;
-  margin-bottom: 20px;
 
   @media ${device.mobileL} {
     font-size: 40px;
@@ -118,9 +117,11 @@ const Title = styled.h1`
   }
 `;
 
-const Subtitle = styled.p`
+const Subtitle = styled.span`
+  display: block;
   font-style: italic;
   font-size: 25px;
+  margin-top: 20px;
 
   @media ${device.mobileL} {
     font-size: 30px;
@@ -171,24 +172,26 @@ export const HomeCarousel: React.FC<HomeCarouselProps> = ({
         </Slide>
         <Slide>
           <SlideCol color="#443563" n={2}>
-            <Img2 src="./img/slide22.jpeg" alt="" />
+            <Img2 src="./img/slide22.jpeg" alt="Parka acolchada marrón para hombre con cierre de cremallera" />
           </SlideCol>
           <SlideCol color="#232228" n={1} hideMobile>
-            <Img1 src="./img/slide21.jpeg" title="" />
+            <Img1 src="./img/slide21.jpeg" title="Jersey de cuello alto de punto de colores para hombre" />
           </SlideCol>
         </Slide>
         <Slide>
           <SlideCol color="#bf8a3d" n={1}>
-            <Img2 src="./img/slide31.jpeg" alt="" />
+            <Img2 src="./img/slide31.jpeg" alt="Jersey jaspeado de punto gris para hombre con cuello alto y cordones" />
           </SlideCol>
           <SlideCol color="#232228" n={2} hideMobile>
-            <Img1 src="./img/slide32.jpeg" title="" />
+            <Img1 src="./img/slide32.jpeg" title="Jersey de punto para hombre con grecas de color crema" />
           </SlideCol>
         </Slide>
       </MyCarousel>
       <TitleWrap>
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
+        <Title>
+          {title}
+          <Subtitle>{subtitle}</Subtitle>
+        </Title>
       </TitleWrap>
     </Container>
   );

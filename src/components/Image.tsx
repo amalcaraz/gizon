@@ -43,10 +43,10 @@ export const Image: React.FC<ImageProp> = ({ src, alt, className }) => {
   return (
     <Picture>
       {res.map(({ media, srcSet }) => (
-        <>
+        <React.Fragment key={media}>
           <source type="image/webp" srcSet={srcSet[0]} media={media} />
           <source srcSet={srcSet[1]} media={media} />
-        </>
+        </React.Fragment>
       ))}
       <img className={className} src={defSrc} srcSet={defSrcSet} alt={alt} />
     </Picture>

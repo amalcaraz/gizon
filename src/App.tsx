@@ -7,8 +7,9 @@ import { Routes } from "./components/Routes";
 import { Main } from "./components/Main";
 import { GlobalStyle } from "./styles/global";
 import { config } from "./core/config";
+import { CookiesMessage } from "./components/CookiesMessage";
 
-const App: React.FC = function App() {
+const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
@@ -18,9 +19,10 @@ const App: React.FC = function App() {
           <Routes />
         </Main>
         <Footer />
+        <CookiesMessage />
       </Router>
     </>
   );
 };
 
-export default App;
+export default App

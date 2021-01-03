@@ -1,8 +1,9 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import styled from "styled-components";
-import { Container } from "../components/Container";
+import React from "react"
+import styled from "styled-components"
+import { Container } from "../components/Container"
+import { PageMeta } from "../components/PageMeta"
 import { TextBox } from "../components/TextBox"
+import { RouteId } from "../core/routes"
 
 const Container404 = styled(Container)`
   min-height: 800px;
@@ -11,10 +12,7 @@ const Container404 = styled(Container)`
 export const NotFound: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>404 - Not Found | GIZON Moda</title>
-        <meta name="description" content="Ha habido un problema al obtener la página solicitada" />
-      </Helmet>
+      <PageMeta id={RouteId.NOT_FOUND} />
       <Container404>
         <TextBox title="Página no encontrada" quote="404">
           <p>
@@ -24,5 +22,5 @@ export const NotFound: React.FC = () => {
         </TextBox>
       </Container404>
     </>
-  );
-};
+  )
+}
