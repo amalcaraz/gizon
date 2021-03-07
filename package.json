@@ -26,7 +26,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "react-snap",
+    "postbuild": "react-snap && npm run sitemap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -37,7 +37,8 @@
     "img2": "rm -rf public/img && npm run webp && npm run jpg",
     "webp": "imagemin images/* --plugin.webp.quality=95 --out-dir=public/img",
     "jpg": "imagemin images/*.jpeg --plugin.mozjpeg.quality=85 --out-dir=public/img",
-    "img": "rm -rf public/img && node scripts/img.js"
+    "img": "rm -rf public/img && node scripts/img.js",
+    "sitemap": "react-snap-sitemap --base-url='https://www.gizon-moda.com/'"
   },
   "husky": {
     "hooks": {
@@ -65,6 +66,7 @@
     ]
   },
   "devDependencies": {
+    "@alex-drocks/react-snap-sitemap": "^0.2.4",
     "@types/react-helmet": "^6.1.0",
     "@types/react-router-dom": "^5.1.6",
     "@types/styled-components": "^5.1.7",
